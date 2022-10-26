@@ -1,0 +1,12 @@
+.roam-block-container[data-page-links*="rm-horizontal"] .rm-block-children {
+    display: flex;
+    flex-direction: row;
+}
+
+.roam-block-container[data-page-links*="rm-hide"] span.rm-page-ref[data-tag*="rm"] {
+    display: none;
+}
+
+.roam-block-container[data-page-links*="rm-horizontal"] .rm-block-children .hoverparent {
+    min-width: unset !important;
+}
