@@ -56,6 +56,10 @@ export default {
             label: "Product Hunt import",
             callback: () => {
                 const uid = window.roamAlphaAPI.ui.getFocusedBlock()?.["block-uid"];
+                if (uid == undefined) {
+                    alert("Please make sure to focus a block before importing from Product Hunt");
+                    return;
+                }
                 fetchPH(CP).then(async (blocks) => {
                     const parentUid = uid || await window.roamAlphaAPI.ui.mainWindow.getOpenPageOrBlockUid();
                     await window.roamAlphaAPI.updateBlock(
