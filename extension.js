@@ -113,6 +113,8 @@ export default {
                     }
                     if (!extensionAPI.settings.get("ph-header")) {
                         PHHeader = "Product Hunt Top Voted:";
+                    } else {
+                        PHHeader = extensionAPI.settings.get("ph-header");
                     }
 
                     var currentDate = new Date();
@@ -160,7 +162,7 @@ export default {
                         SBoutput.push({ "text": PHHeader, "children": output });
                         return SBoutput;
                     } else {
-                    return output;
+                        return output;
                     }
                 };
             }
